@@ -1,3 +1,3 @@
 FROM gliderlabs/alpine:3.6
-RUN apk-install mysql-client
-ENTRYPOINT ["/bin/sh -c"]
+RUN apk add --no-cache bash && apk-install --no-cache mysql-client
+ENTRYPOINT ["/bin/bash"]
